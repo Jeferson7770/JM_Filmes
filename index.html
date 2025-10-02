@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JM Prime</title>
+  <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__logo">
+        <a href="index.html">JM Prime</a>
+      </h1>
+
+      <ul class="header__links">
+
+
+        <!-- User -->
+        <li class="header__links-item header__user">
+          <button class="header__user-button" aria-haspopup="true" aria-expanded="false">
+            <i class="bi bi-person-circle"></i>
+          </button>
+
+          <ul class="header__submenu">
+            <li class="header__submenu-item"><a href="login.html">Fazer login</a></li>
+            <li class="header__submenu-item"><a href="#ajuda">Ajuda</a></li>
+            <li class="header__submenu-item"><a href="register.html">Assista onde quiser</a></li>
+          </ul>
+        </li>
+
+        <!-- Botão -->
+        <li class="header__links-item">
+          <a href="register.html" class="button button--secondary">Assine o prime</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Vídeo em background -->
+    <div class="hero__video">
+      <div id="trailerVideo"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__branding">
+        <h1 class="hero__title">Oppenheimer</h1>
+        <span class="hero__badge">7 OSCARS®</span>
+      </div>
+
+      <p class="hero__sinopse">
+        Escrito e dirigido por Christopher Nolan, Oppenheimer é um épico suspense filmado em IMAX®
+        que leva o público ao paradoxo pulsante do homem enigmático que deve arriscar destruir o
+        mundo para salvá-lo.
+      </p>
+
+      <ul class="hero__info">
+        <li class="hero__info-item">IMDb 8,3</li>
+        <li class="hero__info-item">2 h 58 min</li>
+        <li class="hero__info-item">2023</li>
+        <li class="hero__info-item">X-RAY</li>
+        <li class="hero__info-item">HDR</li>
+        <li class="hero__info-item">UHD</li>
+        <li class="hero__info-item hero__info-item--age">16</li>
+      </ul>
+
+      <p class="hero__tags">
+        <strong class="hero__tags-item hero__tags-item--highlight">Histórico</strong> •
+        <strong class="hero__tags-item hero__tags-item--highlight">Drama</strong> •
+        <span class="hero__tags-item">Inteligente</span> •
+        <span class="hero__tags-item">Pesado</span>
+      </p>
+
+
+      <div class="hero__buttons">
+        <a href="login.html" class="hero__button">Alugar <span>em UHD por R$ 9,90</span></a>
+        <a href="login.html" class="hero__button">Comprar <span>em UHD por R$ 29,90</span></a>
+        <a href="login.html" class="hero__button">Mais opções de <span>compra/aluguel</span></a>
+      </div>
+      <div class="hero__icons">
+        <button class="hero__icon" data-tooltip="Assistir trailer" id="btnTrailer">
+          <i class="bi bi-play-circle"></i>
+        </button>
+        <a href="login.html" class="hero__icon" data-tooltip="Adicionar à lista">
+          <i class="bi bi-plus"></i>
+        </a>
+
+        <a href="login.html" class="hero__icon" data-tooltip="Curtir">
+          <i class="bi bi-hand-thumbs-up"></i>
+        </a>
+
+        <a href="login.html" class="hero__icon" data-tooltip="Não curtir">
+          <i class="bi bi-hand-thumbs-down"></i>
+        </a>
+
+        <a href="login.html" class="hero__icon" data-tooltip="Compartilhar">
+          <i class="bi bi-share"></i>
+        </a>
+        <button class="hero__close" id="btnFechar" data-tooltip="Fechar trailer">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+
+
+      <p class="hero__aviso">
+        Disponível para alugar ou comprar.<br>
+        Você tem um período de 30 dias para começar a assistir a um vídeo alugado e, após o início,
+        precisa terminar de assistir em 48 horas.
+      </p>
+    </div>
+  </section>
+
+  <section class="movie-details">
+    <div class="movie-details__container">
+      <h2 class="title movie-details__title">Mais Detalhes</h2>
+
+
+      <div class="movie-details__grid">
+        <div class="movie-details__card">
+          <h3 class="movie-details__subtitle">Assistir offline</h3>
+          <p>Disponível para download</p>
+
+          <h3 class="movie-details__subtitle">Gêneros</h3>
+          <p>Filmes de drama, filmes baseados na vida real</p>
+
+          <h3 class="movie-details__subtitle">Esse show é...</h3>
+          <p>
+            Cerebral, Agridoce, Drama, Visualmente Impressionante, Gênio Torturado, Segunda Guerra Mundial,
+            Aclamado pela Crítica, Histórico, Política, Filme
+          </p>
+        </div>
+
+        <div class="movie-details__card">
+          <h3 class="movie-details__subtitle">Áudio</h3>
+          <p>
+            Inglês - Descrição de áudio, Inglês [Original], Francês, Italiano, Português (Brasil)
+          </p>
+
+          <h3 class="movie-details__subtitle">Legendas</h3>
+          <p>Inglês, francês, italiano, coreano, português (Brasil)</p>
+        </div>
+
+        <div class="movie-details__card">
+          <h3 class="movie-details__subtitle">Elenco</h3>
+          <p>
+            Cillian Murphy, Robert Downey Jr., Emily Blunt, Matt Damon, Jason Clarke, Florence Pugh,
+            Kenneth Branagh, Gary Oldman, Rami Malek
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shows">
+    <!-- Título centralizado -->
+    <h2 class="title shows__title">Destaques do Catálogo</h2>
+
+    <!-- Wrapper do carrossel com setinhas -->
+    <div class="shows__wrapper">
+      <button class="shows__arrow shows__arrow--left">&#10094;</button>
+
+      <!-- Lista única com todos os cards -->
+      <ul class="shows__list shows__list--is-active">
+        <!-- Em breve -->
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/em_breve/desencantada.jpg" alt="Desencantada">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 1h 58min</p>
+              <p>A magia retorna em uma nova aventura encantada.</p>
+            </div>
+          </div>
+        </li>
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/em_breve/willow.jpg" alt="Willow">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 2h 10min</p>
+              <p>Uma jornada épica em um mundo de fantasia.</p>
+            </div>
+          </div>
+        </li>
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/em_breve/lobisomem.jpg" alt="Lobisomem">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 1h 30min</p>
+              <p>Uma noite sombria cheia de mistérios.</p>
+            </div>
+          </div>
+        </li>
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/em_breve/spidey.jpg" alt="Spidey">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 25min</p>
+              <p>As aventuras animadas do pequeno Homem-Aranha.</p>
+            </div>
+          </div>
+        </li>
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/em_breve/the_santa_clauses.jpg" alt="The Santa Clauses">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 40min</p>
+              <p>O Papai Noel encara novos desafios mágicos.</p>
+            </div>
+          </div>
+        </li>
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/em_breve/sem_limites.jpg" alt="Sem Limites">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 1h</p>
+              <p>A incrível jornada da expedição de Fernão de Magalhães.</p>
+            </div>
+          </div>
+        </li>
+
+        <!-- Populares -->
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/mais_populares/obi_wan.jpg" alt="Obi Wan">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 1h</p>
+              <p>O mestre Jedi retorna em uma nova missão.</p>
+            </div>
+          </div>
+        </li>
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/mais_populares/red.jpg" alt="Red">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 1h 40min</p>
+              <p>Uma menina enfrenta mudanças mágicas na adolescência.</p>
+            </div>
+          </div>
+        </li>
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/mais_populares/bluey.jpg" alt="Bluey">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 20min</p>
+              <p>As aventuras divertidas da filhote Bluey.</p>
+            </div>
+          </div>
+        </li>
+
+        <!-- Star+ -->
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/mais_no_star_plus/nba.jpg" alt="NBA">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 2h 30min</p>
+              <p>A emoção do basquete norte-americano.</p>
+            </div>
+          </div>
+        </li>
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/mais_no_star_plus/os_simpson.jpg" alt="Os Simpson">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 22min</p>
+              <p>As divertidas e caóticas histórias da família Simpson.</p>
+            </div>
+          </div>
+        </li>
+        <li class="shows__list__item">
+          <div class="shows__card">
+            <img src="./dist/images/mais_no_star_plus/premier_league.jpg" alt="Premier League">
+            <div class="shows__overlay">
+              <p><strong>Duração:</strong> 2h</p>
+              <p>Os jogos mais emocionantes do futebol inglês.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <button class="shows__arrow shows__arrow--right">&#10095;</button>
+    </div>
+  </section>
+
+
+  <section class="plans">
+    <div class="plans__container">
+      <!-- Título e subtítulo -->
+      <div class="plans__heading-box">
+        <h2 class="title">Que plano você vai escolher?</h2>
+        <p class="plans__subheading">
+          Você pode alterar ou cancelar seu plano quando quiser.
+        </p>
+      </div>
+
+      <div class="plans__grid">
+        <!-- Coluna de features -->
+        <div class="plans__header-cell"></div>
+
+        <!-- Premium -->
+        <div class="plans__card plans__card--premium plans__col--premium">
+          <div class="plans__badge">Mais Popular</div>
+          <button class="plans__title plans__title--btn" data-plan="premium"
+            onclick="window.location.href='login.html'">
+            Prêmio
+          </button>
+          <p class="plans__price">R$ 66,90/mês<br><small>(impostos inclusos*)</small></p>
+        </div>
+
+        <!-- Padrão -->
+        <div class="plans__card">
+          <button class="plans__title plans__title--btn" data-plan="padrao"
+            onclick="window.location.href='login.html'">Padrão</button>
+          <p class="plans__price">R$ 46,90/mês<br><small>(impostos inclusos*)</small></p>
+        </div>
+
+        <!-- Com anúncios -->
+        <div class="plans__card">
+          <button class="plans__title plans__title--btn" data-plan="anuncios"
+            onclick="window.location.href='login.html'">Com anúncios</button>
+          <p class="plans__price">R$ 27,99/mês<br><small>(impostos inclusos*)</small></p>
+        </div>
+
+        <!-- Linha 1 -->
+        <div class="plans__feature">Canais de esportes, torneios e centenas de eventos exclusivos por mês**</div>
+        <div class="plans__cell plans__cell--check plans__col--premium">✔</div>
+        <div class="plans__cell plans__cell--dash">–</div>
+        <div class="plans__cell plans__cell--dash">–</div>
+
+        <!-- Linha 2 -->
+        <div class="plans__feature">Novos lançamentos de filmes, séries originais e grandes clássicos</div>
+        <div class="plans__cell plans__cell--check plans__col--premium">✔</div>
+        <div class="plans__cell plans__cell--check">✔</div>
+        <div class="plans__cell plans__cell--check">✔</div>
+
+        <!-- Linha 3 -->
+        <div class="plans__feature">Filmes e programas sem intervalos comerciais***</div>
+        <div class="plans__cell plans__cell--check plans__col--premium">✔</div>
+        <div class="plans__cell plans__cell--check">✔</div>
+        <div class="plans__cell plans__cell--dash">–</div>
+
+        <!-- Linha 4 -->
+        <div class="plans__feature">Qualidade de vídeo até 4K UHD/HDR e som imersivo****</div>
+        <div class="plans__cell plans__cell--check plans__col--premium">✔</div>
+        <div class="plans__cell plans__cell--dash">–</div>
+        <div class="plans__cell plans__cell--dash">–</div>
+
+        <!-- Linha 5 -->
+        <div class="plans__feature">Dispositivos que podem transmitir conteúdo simultaneamente</div>
+        <div class="plans__cell plans__col--premium">5</div>
+        <div class="plans__cell">2</div>
+        <div class="plans__cell">2</div>
+
+        <!-- Linha 6 -->
+        <div class="plans__feature">Downloads para assistir offline, quando e onde quiser</div>
+        <div class="plans__cell plans__cell--check plans__col--premium">✔</div>
+        <div class="plans__cell plans__cell--check">✔</div>
+        <div class="plans__cell plans__cell--dash">–</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans">
+    <div class="plans__container">
+
+
+      <div class="plans__cards">
+        <!-- Premium -->
+        <div class="plans__card plans__card--premium">
+          <div class="plans__badge">Mais Popular</div>
+          <button class="plans__title plans__title--btn" onclick="window.location.href='login.html'">
+            Premium
+          </button>
+          <p class="plans__price">R$ 66,90/mês<br><small>(impostos inclusos*)</small></p>
+
+          <ul class="plans__features-list">
+            <li>✔ Canais de esportes, torneios e eventos exclusivos</li>
+            <li>✔ Novos lançamentos de filmes, séries originais e clássicos</li>
+            <li>✔ Filmes e programas sem intervalos comerciais</li>
+            <li>✔ Qualidade de vídeo até 4K UHD/HDR e som imersivo</li>
+            <li>✔ 5 dispositivos simultâneos</li>
+            <li>✔ Downloads para assistir offline</li>
+          </ul>
+        </div>
+
+        <!-- Padrão -->
+        <div class="plans__card">
+          <button class="plans__title plans__title--btn" onclick="window.location.href='login.html'">
+            Padrão
+          </button>
+          <p class="plans__price">R$ 46,90/mês<br><small>(impostos inclusos*)</small></p>
+
+          <ul class="plans__features-list">
+            <li>✔ Novos lançamentos de filmes, séries originais e clássicos</li>
+            <li>✔ Filmes e programas sem intervalos comerciais</li>
+            <li>✔ 2 dispositivos simultâneos</li>
+            <li>✔ Downloads para assistir offline</li>
+          </ul>
+        </div>
+
+        <!-- Com anúncios -->
+        <div class="plans__card">
+          <button class="plans__title plans__title--btn" onclick="window.location.href='login.html'">
+            Com anúncios
+          </button>
+          <p class="plans__price">R$ 27,99/mês<br><small>(impostos inclusos*)</small></p>
+
+          <ul class="plans__features-list">
+            <li>✔ Novos lançamentos de filmes, séries originais e clássicos</li>
+            <li>✔ 2 dispositivos simultâneos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="available-devices">
+    <h2 class="title">Disponível nos seus dispositivos favoritos</h2>
+    <ul class="available-devices__list">
+      <li class="available-devices__list__item">
+        <img src="./dist/images/dispositivos/computador.png" alt="Computador">
+        <h4 class="title--small">Computador</h4>
+        <ul class="text">
+          <li>Chrome OS</li>
+          <li>MacOS</li>
+          <li>PC Windows</li>
+        </ul>
+      </li>
+      <li class="available-devices__list__item">
+        <img src="./dist/images/dispositivos/tv.png" alt="TV">
+        <h4 class="title--small">TV</h4>
+        <ul class="text">
+          <li>Amazon Fire TV</li>
+          <li>Android TV</li>
+          <li>Apple TV</li>
+          <li>Chromecast</li>
+          <li>TVs LG</li>
+          <li>Roku</li>
+          <li>Samsung</li>
+        </ul>
+      </li>
+      <li class="available-devices__list__item">
+        <img src="./dist/images/dispositivos/videogames.png" alt="Videogames">
+        <h4 class="title--small">Videogames</h4>
+        <ul class="text">
+          <li>PS4</li>
+          <li>PS5</li>
+          <li>Xbox One</li>
+          <li>Xbox Series X</li>
+          <li>Xbox Series S</li>
+        </ul>
+      </li>
+      <li class="available-devices__list__item">
+        <img src="./dist/images/dispositivos/celular.png" alt="Celulares e tablets">
+        <h4 class="title--small">Celulares e tablets</h4>
+        <ul class="text">
+          <li>Tablets Amazon Fire</li>
+          <li>Celulares e Tablets Android</li>
+          <li>iPhone e iPad</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="faq" id="ajuda">
+    <h2 class="title">Perguntas frequentes</h2>
+    <ul class="faq__questions">
+
+      <li class="faq__questions__item">
+        <div class="faq__questions__item__question" data-faq-question>
+          O que está incluído no JM Prime?
+        </div>
+        <div class="faq__questions__item__answer text--big lists">
+          <ul class="lists">
+            <p>Ao assinar o JM Prime você tem acesso a:</p><br>
+            <li>Trailers e sinopses completas de lançamentos e clássicos.</li>
+            <li>Avaliações de outros usuários e recomendações personalizadas.</li>
+            <li>Perfis para cada membro da família.</li>
+            <li>Assistir em até 4 dispositivos ao mesmo tempo (dependendo do plano).</li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="faq__questions__item">
+        <div class="faq__questions__item__question" data-faq-question>
+          Preciso criar uma conta?
+        </div>
+        <div class="faq__questions__item__answer text--big">
+          Sim. Para acessar o JM Prime é necessário criar uma conta. Com ela você poderá gerenciar seu plano, assistir
+          trailers, salvar favoritos e avaliar filmes.
+        </div>
+      </li>
+
+      <li class="faq__questions__item">
+        <div class="faq__questions__item__question" data-faq-question>
+          O JM Prime é pago?
+        </div>
+        <div class="faq__questions__item__answer text--big">
+          Sim. O JM Prime funciona por assinatura. Você pode escolher entre os planos disponíveis e cancelar a qualquer
+          momento.
+        </div>
+      </li>
+
+      <li class="faq__questions__item">
+        <div class="faq__questions__item__question" data-faq-question>
+          Quais formas de pagamento posso utilizar?
+        </div>
+        <div class="faq__questions__item__answer text--big">
+          Aceitamos cartão de crédito, débito, Pix, Mercado Pago e Boleto bancário.
+        </div>
+      </li>
+
+      <li class="faq__questions__item">
+        <div class="faq__questions__item__question" data-faq-question>
+          Onde posso assistir ao JM Prime?
+        </div>
+        <div class="faq__questions__item__answer text--big">
+          Você pode assistir pelo navegador em computadores, tablets, celulares, Smart TVs e videogames.
+        </div>
+      </li>
+
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <h1 class="header__logo auth__title">
+        <a href="index.html">JM Prime</a>
+      </h1>
+
+      <ul class="footer__links">
+        <li class="footer__links__item">
+          <div class="language-selector">
+            <img src="./dist/images/icones/globe.svg" alt="Globo do Mundo">
+            <select>
+              <option>English</option>
+              <option selected>Português</option>
+            </select>
+          </div>
+        </li>
+        <li class="footer__links__item">
+          <a href="#" class="text--small">Termos e Condições de Uso</a>
+        </li>
+        <li class="footer__links__item">
+          <a href="#" class="text--small">Política de Privacidade</a>
+        </li>
+        <li class="footer__links__item">
+          <a href="#" class="text--small">Proteção de Dados</a>
+        </li>
+        <li class="footer__links__item">
+          <a href="#" class="text--small">Anúncios Personalizados</a>
+        </li>
+        <li class="footer__links__item">
+          <a href="#" class="text--small">Dispositivos Compatíveis</a>
+        </li>
+        <li class="footer__links__item">
+          <a href="#ajuda" class="text--small">Ajuda</a>
+        </li>
+        <li class="footer__links__item">
+          <a href="#" class="text--small">Sobre o JM Prime</a>
+        </li>
+      </ul>
+      <p class="text--small">
+        ® 2025 JM Prime. Todos os direitos reservados. Serviço de assinatura paga. Conteúdo sujeito à disponibilidade.
+      </p>
+      <p class="text--small">
+        JM Prime é um serviço baseado em assinatura, sujeito a termos e condições. Comercializado por JM Prime
+        Entretenimento Digital Ltda., São Paulo/SP – Brasil.
+      </p>
+      <div class="footer__container">
+        <p>
+          Desenvolvido por: <strong>
+            <a href="https://www.linkedin.com/in/jefersonmoreiradev/" target="_blank">
+              Jeferson Moreira
+            </a>
+          </strong>
+        </p>
+      </div>
+  </footer>
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script src="./dist/js/main.js"></script>
+</body>
+
+</html>

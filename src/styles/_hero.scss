@@ -1,0 +1,351 @@
+@use 'variaveis' as v;
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: url("../img/oppenheimer.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: v.$corTextoSecundario;
+
+  /* --- quando vídeo aparece --- */
+  &.show-video {
+    .hero__icons {
+      position: absolute;
+      margin-top: 25rem;
+      z-index: 20;
+    }
+  }
+
+  &__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+
+  &.show-video &__video {
+    opacity: 1;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 80px;
+  }
+
+  &__branding {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  &__badge {
+    display: inline-block;
+    color: v.$corDestaque;
+    font-weight: 900;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+
+  &__sinopse {
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+
+    &-item {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+
+      &--age {
+        background: v.$corDeFundoBotaoPrimario;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__tags {
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+
+    &-item {
+      font-weight: 400;
+      color: v.$corTextoPrincipal;
+
+      &--highlight {
+        text-decoration: underline;
+        text-decoration-color: v.$corDestaque;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+        font-weight: 600;
+        color: v.$corDestaque;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    .hero__button {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.12);
+      color: v.$corTextoSecundario;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      line-height: 1.3;
+      min-width: 150px;
+      text-align: center;
+      transition: background 0.3s ease, color 0.3s ease;
+
+      span {
+        display: block;
+        font-weight: 400;
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+
+      &:hover {
+        background: v.$corTextoSecundario;
+        color: v.$corDeFundo;
+      }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 0.9rem;
+    margin-top: 1rem;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    color: v.$corTextoSecundario;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.25s ease, border-color 0.3s ease;
+
+    i {
+      font-size: inherit;
+      line-height: 1;
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.22);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: scale(1.08);
+    }
+  }
+
+  &__close {
+    display: none;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    color: v.$corTextoSecundario;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+/* 🌍 RESPONSIVIDADE */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .hero {
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__sinopse {
+      font-size: 1rem;
+    }
+  }
+}
+
+/* Celulares médios */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 80vh;
+    padding: 0;
+
+    &__content {
+      margin-top: 70px; // 🔹 espaço para o menu no mobile
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+
+    &__sinopse {
+      display: none;
+    }
+
+    &__info {
+      justify-content: center;
+      font-size: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* 🔹 botões em coluna */
+    &__buttons {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.8rem;
+
+      .hero__button {
+        width: 100%;
+        min-width: auto;
+        font-size: 0.95rem;
+      }
+    }
+
+    &__icons {
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    &__icon {
+      width: 38px;
+      height: 38px;
+      font-size: 1.1rem;
+    }
+
+    /* Ajuste quando vídeo está aberto */
+    &.show-video {
+      .hero__icons {
+        bottom: 15px;
+        gap: 0.6rem;
+      }
+    }
+  }
+
+  .hero__sinopse--mobile {
+    display: block;
+    padding: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    background: v.$corDeFundo;
+    color: v.$corTextoSecundario;
+    text-align: center;
+  }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .hero {
+    &__title {
+      font-size: 1.4rem;
+    }
+
+    &__info {
+      font-size: 0.8rem;
+      gap: 0.2rem;
+    }
+
+    &__icon {
+      width: 34px;
+      height: 34px;
+      font-size: 1rem;
+    }
+  }
+}
+
+.hero__icon::after,
+.hero__close::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 120%;
+  /* 🔹 agora aparece embaixo */
+  left: 50%;
+  transform: translateX(-50%);
+  background: v.$corTextoSecundario;
+  color: v.$corDeFundo;
+  padding: 5px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 50;
+}
+
+/* setinha apontando para cima */
+.hero__icon::before,
+.hero__close::before {
+  content: "";
+  position: absolute;
+  top: 110%;
+  /* 🔹 posiciona acima da caixinha */
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-bottom-color: v.$corGrid;
+  /* seta invertida */
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 50;
+}
+
+.hero__icon:hover::after,
+.hero__icon:hover::before,
+.hero__close:hover::after,
+.hero__close:hover::before {
+  opacity: 1;
+}
