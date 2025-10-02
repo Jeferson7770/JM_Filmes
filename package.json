@@ -159,11 +159,12 @@
     "yargs": "^16.2.0",
     "yargs-parser": "^20.2.9"
   },
-  "scripts": {
-    "dev": "gulp watch",
-    "build": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+ "scripts": {
+  "dev": "gulp watch",
+  "build": "gulp",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jeferson7770/JM_Filmes.git"
