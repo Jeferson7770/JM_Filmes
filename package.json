@@ -1,5 +1,9 @@
 {
-  "name": "jm-filmes",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1"
+  },
+  "name": "jm_filmes",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -22,7 +26,6 @@
     "base64-js": "^1.5.1",
     "binary-extensions": "^2.3.0",
     "bl": "^5.1.0",
-    "bootstrap": "^5.3.8",
     "braces": "^3.0.3",
     "buffer": "^6.0.3",
     "chalk": "^4.1.2",
@@ -34,7 +37,6 @@
     "convert-source-map": "^2.0.0",
     "copy-props": "^4.0.0",
     "detect-file": "^1.0.0",
-    "detect-libc": "^1.0.3",
     "each-props": "^3.0.0",
     "emoji-regex": "^8.0.0",
     "end-of-stream": "^1.4.5",
@@ -62,13 +64,13 @@
     "global-prefix": "^1.0.2",
     "glogg": "^2.2.0",
     "graceful-fs": "^4.2.11",
+    "gulp-cli": "^3.1.0",
     "gulplog": "^2.2.0",
     "has-flag": "^4.0.0",
     "hasown": "^2.0.2",
     "homedir-polyfill": "^1.0.3",
     "iconv-lite": "^0.6.3",
     "ieee754": "^1.2.1",
-    "immutable": "^5.1.3",
     "inherits": "^2.0.4",
     "ini": "^1.3.8",
     "interpret": "^3.1.1",
@@ -88,7 +90,6 @@
     "is-windows": "^1.0.2",
     "isexe": "^2.0.0",
     "isobject": "^3.0.1",
-    "jquery": "^3.7.1",
     "last-run": "^2.0.0",
     "lead": "^4.0.0",
     "liftoff": "^5.0.1",
@@ -96,7 +97,6 @@
     "map-cache": "^0.2.2",
     "micromatch": "^4.0.8",
     "mute-stdout": "^2.0.0",
-    "node-addon-api": "^7.1.1",
     "normalize-path": "^3.0.0",
     "now-and-later": "^3.0.0",
     "object.defaults": "^1.1.0",
@@ -126,13 +126,12 @@
     "semver": "^6.3.1",
     "semver-greatest-satisfied-range": "^2.0.0",
     "source-map": "^0.5.7",
-    "source-map-js": "^1.2.1",
     "sparkles": "^2.1.0",
     "stream-composer": "^1.0.2",
     "stream-exhaust": "^1.0.2",
     "streamx": "^2.22.1",
-    "string_decoder": "^1.3.0",
     "string-width": "^4.2.3",
+    "string_decoder": "^1.3.0",
     "strip-ansi": "^6.0.1",
     "supports-color": "^7.2.0",
     "supports-preserve-symlinks-flag": "^1.0.0",
@@ -159,29 +158,23 @@
     "yargs": "^16.2.0",
     "yargs-parser": "^20.2.9"
   },
- "scripts": {
-  "dev": "gulp watch",
-  "build": "gulp",
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
-
+ 
+  "scripts": {
+    "dev": "gulp watch",
+    "build": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jeferson7770/JM_Filmes.git"
   },
   "keywords": [],
-  "author": "Jeferson Moreira",
+  "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Jeferson7770/JM_Filmes/issues"
   },
-  "homepage": "https://github.com/Jeferson7770/JM_Filmes#readme",
-  "devDependencies": {
-    "gulp": "^5.0.1",
-    "gulp-cli": "^3.1.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-sass": "^6.0.1",
-    "gulp-uglify": "^3.0.2",
-    "sass": "^1.92.0"
-  }
+  "homepage": "https://github.com/Jeferson7770/JM_Filmes#readme"
 }
