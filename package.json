@@ -62,7 +62,6 @@
     "global-prefix": "^1.0.2",
     "glogg": "^2.2.0",
     "graceful-fs": "^4.2.11",
-    "gulp-cli": "^3.1.0",
     "gulplog": "^2.2.0",
     "has-flag": "^4.0.0",
     "hasown": "^2.0.2",
@@ -179,6 +178,7 @@
   "homepage": "https://github.com/Jeferson7770/clone_disneyplus#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-cli": "^3.1.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^6.0.1",
     "gulp-uglify": "^3.0.2",
