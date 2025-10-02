@@ -1,7 +1,12 @@
 {
   "devDependencies": {
-    "gulp": "^5.0.1",
-    "gulp-sass": "^6.0.1"
+    "del": "^8.0.1",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^3.1.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.93.2"
   },
   "name": "jm_filmes",
   "version": "1.0.0",
@@ -64,7 +69,6 @@
     "global-prefix": "^1.0.2",
     "glogg": "^2.2.0",
     "graceful-fs": "^4.2.11",
-    "gulp-cli": "^3.1.0",
     "gulplog": "^2.2.0",
     "has-flag": "^4.0.0",
     "hasown": "^2.0.2",
@@ -130,8 +134,8 @@
     "stream-composer": "^1.0.2",
     "stream-exhaust": "^1.0.2",
     "streamx": "^2.22.1",
-    "string-width": "^4.2.3",
     "string_decoder": "^1.3.0",
+    "string-width": "^4.2.3",
     "strip-ansi": "^6.0.1",
     "supports-color": "^7.2.0",
     "supports-preserve-symlinks-flag": "^1.0.0",
@@ -158,13 +162,11 @@
     "yargs": "^16.2.0",
     "yargs-parser": "^20.2.9"
   },
- 
   "scripts": {
     "dev": "gulp watch",
     "build": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Jeferson7770/JM_Filmes.git"
